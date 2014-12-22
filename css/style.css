@@ -1,0 +1,74 @@
+/* 
+====================
+Shared Styles
+====================
+*/
+
+#logo{
+	height:20%;
+	width: 20%;
+display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container {
+    padding-top: 2%;
+} 
+ 
+#nav ul li {
+    display: inline;
+    margin: 0 20px 0 0;
+}
+
+/* 
+====================
+Top of Index
+====================
+*/
+ #primary-left{
+ 	padding-top:3%;
+ }
+ #primary-left h1{
+ 	text-align: center;
+ }
+ #primary-left p{
+ 	text-align: center;
+ }
+/* 
+====================
+Bottom of Index
+====================
+*/
+#bottom{
+	padding-bottom: 2.5%;
+	padding-top: 2.5%;
+}
+#bottom h1{
+	padding-top: 2.5%;
+	text-align: center;
+}
+#bottom p{
+	text-align: center;
+}
+
+/* 
+====================
+Footer
+====================
+*/
+ #footer{
+ 	background-color: #009688;
+ }
+ #footer a{
+ 	color:white;
+ 	text-decoration: none;
+ }
+ /* 
+====================
+Awesome Icons
+====================
+*/
+.fa{
+	font-size: 25px;
+}
