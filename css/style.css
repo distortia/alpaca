@@ -1,3 +1,10 @@
+/*
+Main Colors
+Brand color:         #009688;
+Lighter brand color: #00b3a1;
+Hover color: 		 #00e6cf;
+/*
+
 /* 
 ====================
 Shared Styles
@@ -5,34 +12,47 @@ Shared Styles
 */
 
 #logo{
-	height:20%;
-	width: 20%;
-display: block;
-  margin-left: auto;
-  margin-right: auto;
+	position: relative;
+	max-width: 80%;
+	margin: 0rem auto -8rem;
 }
 
-.container {
-    padding-top: 2%;
-} 
  
 #nav ul li {
     display: inline;
     margin: 0 20px 0 0;
 }
+#nav a,#nav i,#nav p{
+ 	color:white;
+ }
+a{
+	text-decoration: none;
+}
+/* 
+====================
+Header + footer Shared
+====================
+*/
+ #header, #footer{
+ 	background-color: #009688;
+ 	padding-top: 2.5%;
+ 	color:white;
+ }
+
 
 /* 
 ====================
 Top of Index
 ====================
 */
+#top{
+	padding-top: 5%;
+	padding-bottom: 2.5%;
+}
  #primary-left{
- 	padding-top:3%;
+ 	padding-top:10%;
  }
- #primary-left h1{
- 	text-align: center;
- }
- #primary-left p{
+ #primary-left h1, #primary-left p{
  	text-align: center;
  }
 /* 
@@ -44,26 +64,23 @@ Bottom of Index
 	padding-bottom: 2.5%;
 	padding-top: 2.5%;
 }
-#bottom h1{
+#bottom h3{
 	padding-top: 2.5%;
 	text-align: center;
 }
 #bottom p{
 	text-align: center;
 }
-
 /* 
 ====================
 Footer
 ====================
 */
- #footer{
- 	background-color: #009688;
- }
- #footer a{
- 	color:white;
- 	text-decoration: none;
- }
+
+#footer p #date{
+	font-size: 15px;
+}
+ 
  /* 
 ====================
 Awesome Icons
@@ -71,4 +88,7 @@ Awesome Icons
 */
 .fa{
 	font-size: 25px;
+}
+#icon:hover{
+ color:#00e6cf;
 }
