@@ -1,4 +1,4 @@
-//Gets Year and appens its to footer
+//Gets Year and appends it to footer
 window.onload = function getDate() {
     var d = new Date();
     var n = "Copyright <i class=\"fa fa-copyright\" style=\"font-size: 15px;\"></i> " + d.getFullYear() + " Alpaca Chat";
