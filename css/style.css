@@ -17,6 +17,9 @@ Shared Styles
 	margin: 0rem auto -8rem;
 }
 
+h1, p, h3{
+ 	text-align: center;
+ }
  
 #nav ul li {
     display: inline;
@@ -28,6 +31,11 @@ Shared Styles
 a{
 	text-decoration: none;
 }
+img{
+  max-width: 100%;
+  box-sizing: border-box; 
+}
+
 /* 
 ====================
 Header + footer Shared
@@ -52,9 +60,6 @@ Top of Index
  #primary-left{
  	padding-top:10%;
  }
- #primary-left h1, #primary-left p{
- 	text-align: center;
- }
 /* 
 ====================
 Bottom of Index
@@ -66,10 +71,6 @@ Bottom of Index
 }
 #bottom h3{
 	padding-top: 2.5%;
-	text-align: center;
-}
-#bottom p{
-	text-align: center;
 }
 /* 
 ====================
@@ -80,7 +81,9 @@ Footer
 #footer p #date{
 	font-size: 15px;
 }
- 
+ #footer p {
+ 	text-align: left;
+ }
  /* 
 ====================
 Awesome Icons
@@ -92,3 +95,8 @@ Awesome Icons
 #icon:hover{
  color:#00e6cf;
 }
+ /* 
+====================
+Media Queries
+====================
+*/
