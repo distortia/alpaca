@@ -36,6 +36,32 @@ img{
   box-sizing: border-box; 
 }
 
+ /* 
+}
+====================
+Media Queries for Shared Styles
+====================
+*/
+/* Larger than mobile */
+@media only screen and (max-width: 400px) {
+
+}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {}
+
+/* Larger than tablet */
+@media (max-width: 750px) {
+	#nav{
+		display: none;
+	}
+}
+/* Larger than desktop */
+@media (min-width: 1000px) {}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {}
+
 /* 
 ====================
 Header + footer Shared
@@ -95,8 +121,4 @@ Awesome Icons
 #icon:hover{
  color:#00e6cf;
 }
- /* 
-====================
-Media Queries
-====================
-*/
+
