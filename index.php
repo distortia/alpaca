@@ -1,52 +1,14 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-  <!-- Basic Page Needs
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta charset="utf-8">
-  <title>Alpaca Chat | The fully encyrpted, no frills, instant messenger!</title>
-  <meta name="description" content="">
-  <meta name="author" content="">
-
-  <!-- Mobile Specific Metas
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- FONT
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
-  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-
-  <!-- CSS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/skeleton.css">
-  <link rel="stylesheet" href="css/style.css">
-
-  <!-- Favicon
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="images/favicon.png" />
+<?php include ('includes/header.php'); ?>
 
 </head>
 <body>
   <!-- Nav Bar
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <section id="header">
-    <div class="container">
-      <div id="nav" class="ten columns">
-          <ul>
-              <li><a class="button" href="#">Home</a></li>
-              <li><a class="button" href="#">Download</a></li>
-              <li><a class="button" href="#">About</a></li>
-              <li><a class="button" href="#">Contact</a></li>
-          </ul>
-      </div>
-      <div class="two columns">
-        <p><img id="logo" src="images/alpaca.png"></p>
-      </div>
-    </div>
+  <section id="navbar">
+  <?php include ('includes/navbar.php'); ?>
   </section>
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -89,18 +51,7 @@
   <!-- Footer
   –––––––––––––––––––––––––––––––––––––––––––––––––– --> 
   <section id="footer">
-    <div class="container">
-      <div class="ten columns">
-        <p id="date"><p>
-      </div>
-      <div id="nav" class="two columns">
-        <ul>
-         <li><a href="#"><i id="icon" class="fa fa-twitter"></i></a></li>
-         <li><a href="#"><i id="icon" class="fa fa-facebook"></i></a></li>
-         <li><a href="#"><i id="icon" class="fa fa-github"></i></a></li>
-        </ul>
-      </div>
-    </div>
+   <?php include ('includes/footer.php'); ?>
   </section>
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->

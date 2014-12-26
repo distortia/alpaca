@@ -67,7 +67,7 @@ Media Queries for Shared Styles
 Header + footer Shared
 ====================
 */
- #header, #footer{
+ #navbar, #footer{
  	background-color: #009688;
  	padding-top: 2.5%;
  	color:white;
@@ -122,3 +122,13 @@ Awesome Icons
  color:#00e6cf;
 }
 
+ /* 
+====================
+Downloads Page
+====================
+*/
+.download-table{
+	padding: 5%
+  max-width: 100%;
+  box-sizing: border-box; }
+}
