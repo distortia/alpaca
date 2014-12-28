@@ -1,8 +1,19 @@
+<<<<<<< HEAD
+=======
+/*
+Main Colors
+Brand color:         #009688;
+Lighter brand color: #00b3a1;
+Hover color: 		 #00e6cf;
+/*
+
+>>>>>>> web
 /* 
 ====================
 Shared Styles
 ====================
 */
+<<<<<<< HEAD
 #logo{
 	height:20%;
 	width: 20%;
@@ -16,15 +27,91 @@ p, h1{
 .container {
     padding-top: 2%;
 } 
+=======
+
+#logo{
+	position: relative;
+	max-width: 80%;
+	margin: 0rem auto -8rem;
+}
+
+h1, p, h3{
+ 	text-align: center;
+ }
+>>>>>>> web
  
 #nav ul li {
     display: inline;
     margin: 0 20px 0 0;
 }
+<<<<<<< HEAD
  #primary-left{
  	padding-top:3%;
  }
 
+=======
+#nav a,#nav i,#nav p{
+ 	color:white;
+ }
+a{
+	text-decoration: none;
+}
+img{
+  max-width: 100%;
+  box-sizing: border-box; 
+}
+
+ /* 
+}
+====================
+Media Queries for Shared Styles
+====================
+*/
+/* Larger than mobile */
+@media only screen and (max-width: 400px) {
+
+}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {}
+
+/* Larger than tablet */
+@media (max-width: 750px) {
+	#nav{
+		display: none;
+	}
+}
+/* Larger than desktop */
+@media (min-width: 1000px) {}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {}
+
+/* 
+====================
+Header + footer Shared
+====================
+*/
+ #navbar, #footer{
+ 	background-color: #009688;
+ 	padding-top: 2.5%;
+ 	color:white;
+ }
+
+
+/* 
+====================
+Top of Index
+====================
+*/
+#top{
+	padding-top: 5%;
+	padding-bottom: 2.5%;
+}
+ #primary-left{
+ 	padding-top:10%;
+ }
+>>>>>>> web
 /* 
 ====================
 Bottom of Index
@@ -34,22 +121,37 @@ Bottom of Index
 	padding-bottom: 2.5%;
 	padding-top: 2.5%;
 }
+<<<<<<< HEAD
 #bottom h1{
 	padding-top: 2.5%;
 }
 
 
+=======
+#bottom h3{
+	padding-top: 2.5%;
+}
+>>>>>>> web
 /* 
 ====================
 Footer
 ====================
 */
+<<<<<<< HEAD
  #footer{
  	background-color: #009688;
  }
  #footer a{
  	color:white;
  	text-decoration: none;
+=======
+
+#footer p #date{
+	font-size: 15px;
+}
+ #footer p {
+ 	text-align: left;
+>>>>>>> web
  }
  /* 
 ====================
@@ -58,4 +160,21 @@ Awesome Icons
 */
 .fa{
 	font-size: 25px;
+<<<<<<< HEAD
+=======
+}
+#icon:hover{
+ color:#00e6cf;
+}
+
+ /* 
+====================
+Downloads Page
+====================
+*/
+.download-table{
+	padding: 5%
+  max-width: 100%;
+  box-sizing: border-box; }
+>>>>>>> web
 }
