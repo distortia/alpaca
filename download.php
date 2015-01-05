@@ -13,12 +13,12 @@
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
-<table class="download-table">
+<table class="u-full-width download-table">
   <thead>
     <tr>
-      <th>Format</th>
-      <th>Release</th>
-      <th>Release Date</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Sex</th>
       <th>Location</th>
     </tr>
   </thead>

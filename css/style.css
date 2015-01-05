@@ -10,7 +10,13 @@ Hover color: 		 #00e6cf;
 Shared Styles
 ====================
 */
-
+html{
+	position: relative;
+    min-height: 100%;
+}
+body{
+	margin: 0 0 100px;
+}
 #logo{
 	position: relative;
 	max-width: 80%;
@@ -103,7 +109,13 @@ Bottom of Index
 Footer
 ====================
 */
-
+#footer{
+	position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+}
 #footer p #date{
 	font-size: 15px;
 }
@@ -128,7 +140,7 @@ Downloads Page
 ====================
 */
 .download-table{
-	padding: 5%
-  max-width: 100%;
-  box-sizing: border-box; }
+	padding: 5%;
+	margin: 25px 60px 60px 60px;
+	;
 }
