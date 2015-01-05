@@ -13,27 +13,45 @@
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
-<table class="download-table">
+<table class="u-full-width download-table">
   <thead>
     <tr>
       <th>Format</th>
       <th>Release</th>
       <th>Release Date</th>
-      <th>Location</th>
+      <th>Download</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>Dave Gamache</td>
-      <td>26</td>
-      <td>Male</td>
-      <td>San Francisco</td>
+      <td>Windows</td>
+      <td>0.0.0</td>
+      <td>XX/XX/201X</td>
+      <td><input class="button" type="button" value="Download"></td>
     </tr>
     <tr>
-      <td>Dwayne Johnson</td>
-      <td>42</td>
-      <td>Male</td>
-      <td>Hayward</td>
+      <td>Mac</td>
+      <td>0.0.0</td>
+      <td>XX/XX/201X</td>
+      <td><input class="button" type="button" value="Download"></td>
+    </tr>
+    <tr>
+      <td>Linux</td>
+      <td>0.0.0</td>
+      <td>XX/XX/201X</td>
+      <td><input class="button" type="button" value="Download"></td>
+    </tr>
+    <tr>
+      <td>Android</td>
+      <td>0.0.0</td>
+      <td>XX/XX/201X</td>
+      <td><input class="button" type="button" value="Download"></td>
+    </tr>
+    <tr>
+      <td>IOS</td>
+      <td>0.0.0</td>
+      <td>XX/XX/201X</td>
+      <td><input class="button" type="button" value="Download"></td>
     </tr>
   </tbody>
 </table>
