@@ -140,7 +140,12 @@ Downloads Page
 ====================
 */
 .download-table{
-	padding: 5%;
-	margin: 25px 60px 60px 60px;
-	;
+	padding: 5%;	
+	max-width: 85%;
+	margin-left:100px;
+	margin-top:25px;
+	margin-bottom:100px;
+}
+.download-table td .button{
+	color:#009688;
 }
