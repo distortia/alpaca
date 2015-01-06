@@ -59,7 +59,6 @@ Media Queries for Shared Styles
 /* Larger than tablet */
 @media (max-width: 750px) {
 	#nav{
-		display: none;
 	}
 }
 /* Larger than desktop */
@@ -140,12 +139,18 @@ Downloads Page
 ====================
 */
 .download-table{
+	padding: 5%;
+  	max-width: 100%;
 	padding: 5%;	
 	max-width: 85%;
 	margin-left:100px;
 	margin-top:25px;
 	margin-bottom:100px;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+ 	box-sizing: border-box;         /* Opera/IE 8+ */
 }
+
 .download-table td .button{
 	color:#009688;
 }
