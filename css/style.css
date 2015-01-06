@@ -15,7 +15,7 @@ html{
     min-height: 100%;
 }
 body{
-	margin: 0 0 100px;
+	margin: 0 0 100px 0;
 }
 #logo{
 	position: relative;
@@ -39,7 +39,7 @@ a{
 }
 img{
   max-width: 100%;
-  box-sizing: border-box; 
+  
 }
 
  /* 
@@ -49,17 +49,13 @@ Media Queries for Shared Styles
 ====================
 */
 /* Larger than mobile */
-@media only screen and (max-width: 400px) {
-
-}
+@media (max-width: 400px) {}
 
 /* Larger than phablet (also point when grid becomes active) */
 @media (min-width: 550px) {}
 
 /* Larger than tablet */
 @media (max-width: 750px) {
-	#nav{
-	}
 }
 /* Larger than desktop */
 @media (min-width: 1000px) {}
@@ -146,11 +142,23 @@ Downloads Page
 	margin-left:100px;
 	margin-top:25px;
 	margin-bottom:100px;
-	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
- 	box-sizing: border-box;         /* Opera/IE 8+ */
 }
 
 .download-table td .button{
 	color:#009688;
+}
+
+ /* 
+====================
+About Us Page
+====================
+*/
+#aboutus h1{
+	padding:5%;
+}
+#aboutus h5{
+	padding-left:5%;
+}
+#aboutus .row{
+	padding-bottom: 5%;
 }
