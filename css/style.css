@@ -49,19 +49,27 @@ Media Queries for Shared Styles
 ====================
 */
 /* Larger than mobile */
-@media (max-width: 400px) {}
+@media (max-width: 400px) {
+
+}
 
 /* Larger than phablet (also point when grid becomes active) */
-@media (min-width: 550px) {}
+@media (min-width: 550px) {
+
+}
 
 /* Larger than tablet */
 @media (max-width: 750px) {
 }
 /* Larger than desktop */
-@media (min-width: 1000px) {}
+@media (min-width: 1000px) {
+
+}
 
 /* Larger than Desktop HD */
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {
+	
+}
 
 /* 
 ====================

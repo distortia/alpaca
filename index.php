@@ -53,10 +53,5 @@
   <section id="footer">
    <?php include ('includes/footer.php'); ?>
   </section>
-<!-- End Document
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
- <!-- Includes
-  –––––––––––––––––––––––––––––––––––––––––––––––––– --> 
-  <script src="js/script.js" type="text/javascript" charset="utf-8" async defer></script>
 </body>
 </html>
