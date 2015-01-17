@@ -20,6 +20,11 @@
   <link rel="stylesheet" href="css/skeleton.css">
   <link rel="stylesheet" href="css/style.css">
 
+ <!-- Includes
+  –––––––––––––––––––––––––––––––––––––––––––––––––– --> 
+  <script src="js/script.js" type="text/javascript" charset="utf-8" async defer></script>
+  <script src="https://code.jquery.com/jquery-2.1.3.min.js" type="text/javascript" charset="utf-8" async defer></script>
+  
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="images/favicon.png" />
