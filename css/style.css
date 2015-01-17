@@ -181,3 +181,9 @@ Signup Login Form
 #signup-button {
 	color: white;
 }
+/*
+Setting the specific element id's of the login fields to x009688 to override white text set by .nav
+*/
+#username, #password, #email {
+	color: #009688;
+}
