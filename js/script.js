@@ -7,9 +7,14 @@ window.onload = function getDate() {
 
 //Signup / Login script
 //hide the div
-$( "#login-section" ).hide();
-
-//Toggle the div with each button press
-$("#signin").click(function() {
+$( window ).load(function() {
+  $( "#login-section" ).hide();
+   //Toggle the div with each button press
+ $("#signin").click(function() {
 	$("#login-section").toggle();
 });
+
+
+});
+ 
+ 

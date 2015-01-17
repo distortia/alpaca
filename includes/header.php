@@ -14,16 +14,17 @@
   <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
+  <!-- Includes
+  –––––––––––––––––––––––––––––––––––––––––––––––––– --> 
+  <script src="https://code.jquery.com/jquery-2.1.3.js"></script>
+  <script src="js/script.js" type="text/javascript"></script>
+  <!-- <script src="js/jquery.js" type="text/javascript"></script> -->
+
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
   <link rel="stylesheet" href="css/style.css">
-
- <!-- Includes
-  –––––––––––––––––––––––––––––––––––––––––––––––––– --> 
-  <script src="js/jquery.js"></script>
-  <script src="js/script.js" type="text/javascript" charset="utf-8" async defer></script>
   
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -37,22 +38,5 @@
 
     ga('create', 'UA-56399673-3', 'auto');
     ga('send', 'pageview');
-
-    $(function() {
-      var pull = $('#pull');
-        menu = $('nav ul');
-        menuHeight = menu.height();
-
-      $(pull).on('click', function(e) {
-        e.preventDefault();
-        menu.slideToggle();
-      });
-
-      $(window).resize(function(){
-            var w = $(window).width();
-            if(w > 320 && menu.is(':hidden')) {
-              menu.removeAttr('style');
-            }
-        });
-    });
   </script>
+
