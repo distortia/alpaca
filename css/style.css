@@ -68,7 +68,7 @@ Media Queries for Shared Styles
 
 /* Larger than Desktop HD */
 @media (min-width: 1200px) {
-	
+
 }
 
 /* 
@@ -169,4 +169,12 @@ About Us Page
 }
 #aboutus .row{
 	padding-bottom: 5%;
+}
+ /* 
+====================
+Signup Login Form
+====================
+*/
+.signup{
+	padding-top:5%;
 }
