@@ -24,11 +24,10 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– --> 
   <script src="js/script.js" type="text/javascript" charset="utf-8" async defer></script>
   <script src="https://code.jquery.com/jquery-2.1.3.min.js" type="text/javascript" charset="utf-8" async defer></script>
-  
+
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="images/favicon.png" />
-  <script src="js/jquery.js"></script>
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
