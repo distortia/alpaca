@@ -22,8 +22,8 @@
 
  <!-- Includes
   –––––––––––––––––––––––––––––––––––––––––––––––––– --> 
-  <script src="js/jquery.js"></script>
-  <script src="js/script.js" type="text/javascript" charset="utf-8" async defer></script>
+  <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+  <script src="js/script.js" type="text/javascript" charset="utf-8" defer></script>
   
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
