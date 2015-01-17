@@ -12,10 +12,37 @@
   </section>
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-
-  <label for"Email">Email</label>
-  
-
+  <div class="container signup">
+    <div class="row">
+      <div class="one column">
+        <label for="Username">Username</label>
+      </div>
+      <div class="two columns">
+        <input class="u-full-width" type="text" placeholder="Username" id="username">
+      </div>
+    </div>
+    <div class="row">
+      <div class="one column">
+        <label for="Password">Password</label>
+      </div>
+      <div class="two columns">
+        <input class="u-full-width" type="password" placeholder="Password" id="password">
+      </div>
+    </div>
+    <div class="row">
+      <div class="one column">
+        <label for="Email">Email</label>
+      </div>
+      <div class="two columns">
+        <input class="u-full-width" type="email" placeholder="Email" id="email">
+      </div>
+    </div>
+      <div class="row">
+        <div class="three columns">
+          <input class="button-primary u-full-width" type="submit" value="Log in">
+        </div>
+      </div>
+    </div>
 
   <!-- Footer
   –––––––––––––––––––––––––––––––––––––––––––––––––– --> 
