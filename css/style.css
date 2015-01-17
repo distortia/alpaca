@@ -178,3 +178,6 @@ Signup Login Form
 .signup{
 	padding-top:5%;
 }
+#signup-button {
+	color: white;
+}
