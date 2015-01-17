@@ -6,7 +6,10 @@ window.onload = function getDate() {
 }
 
 //Signup / Login script
-//<div class="sixteen columns"> <div class="four columns offset-by-six"> <p>Login Stuff goes here!</p> </div> </div>
-$("#signin").click(function () {
-  $("#nav").append('<p> Please work </p>');
+//hide the div
+$( "#login-section" ).hide();
+
+//Toggle the div with each button press
+$("#signin").click(function() {
+	$("#login-section").toggle();
 });
