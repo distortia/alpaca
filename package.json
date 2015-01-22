@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "my first socket.io app",
   "dependencies": {
+    "moment": "^2.9.0",
     "socket.io": "^1.2.1"
   }
 }
