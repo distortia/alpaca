@@ -222,7 +222,16 @@ $(function() {
   $inputMessage.click(function () {
     $inputMessage.focus();
   });
-
+  //When sendButton is clicked on chat page
+  $('.sendButton').click(function (){
+    if (username) {
+      sendMessage();
+      socket.emit('stop typing');
+     typing = false;
+    } else {
+      setUsername();
+    }
+  })
   // Socket events
 
   // Whenever the server emits 'login', log the login message
