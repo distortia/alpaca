@@ -11,6 +11,7 @@ $(function() {
   var $window = $(window);
   var $usernameInput = $('.usernameInput'); // Input for username
   var $messages = $('.messages'); // Messages area
+  var $userList = $('.userList'); //User List
   var $inputMessage = $('.inputMessage'); // Input message input box
 
   var $loginPage = $('.login.page'); // The login page
@@ -99,6 +100,14 @@ $(function() {
     addMessageElement($messageDiv, options);
   }
 
+  ///GO HERE
+  //Adds users to userlist
+  function addUser (data, options) {
+    var $userListDiv = $('<li class="userList/>')
+      .data(data.username)
+    addUserListElement($userListDiv, options);
+  }
+  
   // Adds the visual chat typing message
   function addChatTyping (data) {
     data.typing = true;
@@ -142,6 +151,33 @@ $(function() {
       $messages.append($el);
     }
     $messages[0].scrollTop = $messages[0].scrollHeight;
+  }
+
+  //Adds a userList element to the userList and scrolls to the bottom.
+   function addUserListElement (el, options) {
+    var $el = $(el);
+
+    // Setup default options
+    if (!options) {
+      options = {};
+    }
+    if (typeof options.fade === 'undefined') {
+      options.fade = true;
+    }
+    if (typeof options.prepend === 'undefined') {
+      options.prepend = false;
+    }
+
+    // Apply options
+    if (options.fade) {
+      $el.hide().fadeIn(FADE_TIME);
+    }
+    if (options.prepend) {
+      $userList.prepend($el);
+    } else {
+      $userList.append($el);
+    }
+    $userList[0].scrollTop = $userList[0].scrollHeight;
   }
 
   // Prevents input from having injected markup
@@ -222,6 +258,7 @@ $(function() {
   $inputMessage.click(function () {
     $inputMessage.focus();
   });
+
   //When sendButton is clicked on chat page
   $('.sendButton').click(function (){
     if (username) {
