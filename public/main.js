@@ -1,3 +1,5 @@
+//This the the client side JS 
+
 $(function() {
   var FADE_TIME = 150; // ms
   var TYPING_TIMER_LENGTH = 400; // ms
@@ -29,9 +31,9 @@ $(function() {
   function addParticipantsMessage (data) {
     var message = '';
     if (data.numUsers === 1) {
-      message += "there's nobody here :(";
+      message += "there's nobody else here :(";
     } else {
-      message += "there are " + data.numUsers + " people here";
+      message += "there are currenty " + data.numUsers + " people here";
     }
     log(message);
   }
@@ -70,6 +72,7 @@ $(function() {
   }
 
   // Log a message
+  //This puts the message at the top of the chat box, like user entered or left.
   function log (message, options) {
     var $el = $('<li>').addClass('log').text(message);
     addMessageElement($el, options);
@@ -103,11 +106,13 @@ $(function() {
   ///GO HERE
   //Adds users to userlist
   function addUser (data, options) {
-    var $userListDiv = $('<li class="userList/>')
+    var $userListDiv = $('<span class="userList/>')
       .data(data.username)
+      .append("test");
+      
     addUserListElement($userListDiv, options);
   }
-  
+
   // Adds the visual chat typing message
   function addChatTyping (data) {
     data.typing = true;

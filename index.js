@@ -1,3 +1,5 @@
+//This is server side JS
+// http://socket.io/docs/#using-with-the-express-framework
 // Setup basic express server
 var express = require('express');
 var app = express();
