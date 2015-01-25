@@ -3,9 +3,10 @@ var mysql = require('mysql');
 var connection = mysql.createConnection(
     {
       host     : 'localhost',
-      user     : 'root',
-      password : 'mangogo',
-      database : 'alpaca',
+      user     : 'nstalus_paca',
+      password : 'alpaca',
+      database : 'nstalus_alpaca',
+      insecureAuth: true,
       }
 );
  
