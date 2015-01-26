@@ -106,9 +106,13 @@ $(function() {
   ///GO HERE
   //Adds users to userlist
   function addUser (data, options) {
-    var $userListDiv = $('<span class="userList/>')
-      .data(data.username)
-      .append("test");
+    var $userListDiv = $('<span class="userList"/>')
+      .text(data.username)
+      .css('color', getUsernameColor(data.username));
+
+   var $userDiv = $('<li class="user"/>')
+      .data('username', data.username)
+      .append($userListDiv);
       
     addUserListElement($userListDiv, options);
   }
@@ -296,6 +300,7 @@ $(function() {
   socket.on('user joined', function (data) {
     log(data.username + ' joined');
     addParticipantsMessage(data);
+    addUser(data);
   });
 
   // Whenever the server emits 'user left', log it in the chat body
