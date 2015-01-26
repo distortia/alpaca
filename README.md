@@ -1,0 +1,1 @@
+Make sure you run npm install in the directory to remain up to date on packages and dependencies 
