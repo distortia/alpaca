@@ -103,7 +103,6 @@ $(function() {
     addMessageElement($messageDiv, options);
   }
 
-  ///GO HERE
   //Adds users to userlist
   function addUser (data, options) {
     var $userListDiv = $('<span class="userList"/>')
@@ -116,7 +115,13 @@ $(function() {
       
     addUserListElement($userListDiv, options);
   }
+  function removeUser(data, options){
+    //goal: delete li based on contents of element
 
+    //get li element with content of the username
+    //  document.html(data.username)
+    //delete the li element
+  }
   // Adds the visual chat typing message
   function addChatTyping (data) {
     data.typing = true;

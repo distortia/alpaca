@@ -131,6 +131,7 @@ ul {
 .userlist li{
   color:#009688;
   text-align: center;
+  display: list-item;
 }
 .message.typing .messageBody {
   color: gray;
