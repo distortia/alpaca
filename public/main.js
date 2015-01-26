@@ -28,9 +28,9 @@ $(function() {
   function addParticipantsMessage (data) {
     var message = '';
     if (data.numUsers === 1) {
-      message += "there's 1 participant";
+      message += "there's nobody here :(";
     } else {
-      message += "there are " + data.numUsers + " participants";
+      message += "there are " + data.numUsers + " people here";
     }
     log(message);
   }
@@ -222,14 +222,23 @@ $(function() {
   $inputMessage.click(function () {
     $inputMessage.focus();
   });
-
+  //When sendButton is clicked on chat page
+  $('.sendButton').click(function (){
+    if (username) {
+      sendMessage();
+      socket.emit('stop typing');
+     typing = false;
+    } else {
+      setUsername();
+    }
+  })
   // Socket events
 
   // Whenever the server emits 'login', log the login message
   socket.on('login', function (data) {
     connected = true;
     // Display the welcome message
-    var message = "Welcome to Socket.IO Chat – ";
+    var message = "Welcome to Alpaca Chat";
     log(message, {
       prepend: true
     });

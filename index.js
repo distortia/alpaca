@@ -4,6 +4,7 @@ var app = express();
 var server = require('http').createServer(app);
 var io = require('socket.io')(server);
 var port = process.env.PORT || 3000;
+var moment = require('moment');
 
 server.listen(port, function () {
   console.log('Server listening at port %d', port);
@@ -36,6 +37,7 @@ io.on('connection', function (socket) {
     socket.username = username;
     // add the client's username to the global list
     usernames[username] = username;
+    console.log(usernames);
     ++numUsers;
     addedUser = true;
     socket.emit('login', {

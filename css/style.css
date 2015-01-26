@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 /*
 Main Colors
 Brand color:         #009688;
@@ -7,28 +5,18 @@ Lighter brand color: #00b3a1;
 Hover color: 		 #00e6cf;
 /*
 
->>>>>>> web
 /* 
 ====================
 Shared Styles
 ====================
 */
-<<<<<<< HEAD
-#logo{
-	height:20%;
-	width: 20%;
-display: block;
-  margin-left: auto;
-  margin-right: auto;
+html{
+	position: relative;
+    min-height: 100%;
 }
-p, h1{
-	text-align: center;
+body{
+	margin: 0 0 100px 0;
 }
-.container {
-    padding-top: 2%;
-} 
-=======
-
 #logo{
 	position: relative;
 	max-width: 80%;
@@ -38,18 +26,11 @@ p, h1{
 h1, p, h3{
  	text-align: center;
  }
->>>>>>> web
  
 #nav ul li {
     display: inline;
     margin: 0 20px 0 0;
 }
-<<<<<<< HEAD
- #primary-left{
- 	padding-top:3%;
- }
-
-=======
 #nav a,#nav i,#nav p{
  	color:white;
  }
@@ -58,7 +39,7 @@ a{
 }
 img{
   max-width: 100%;
-  box-sizing: border-box; 
+  
 }
 
  /* 
@@ -68,24 +49,27 @@ Media Queries for Shared Styles
 ====================
 */
 /* Larger than mobile */
-@media only screen and (max-width: 400px) {
+@media (max-width: 400px) {
 
 }
 
 /* Larger than phablet (also point when grid becomes active) */
-@media (min-width: 550px) {}
+@media (min-width: 550px) {
+
+}
 
 /* Larger than tablet */
 @media (max-width: 750px) {
-	#nav{
-		display: none;
-	}
 }
 /* Larger than desktop */
-@media (min-width: 1000px) {}
+@media (min-width: 1000px) {
+
+}
 
 /* Larger than Desktop HD */
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {
+
+}
 
 /* 
 ====================
@@ -111,7 +95,6 @@ Top of Index
  #primary-left{
  	padding-top:10%;
  }
->>>>>>> web
 /* 
 ====================
 Bottom of Index
@@ -121,37 +104,26 @@ Bottom of Index
 	padding-bottom: 2.5%;
 	padding-top: 2.5%;
 }
-<<<<<<< HEAD
-#bottom h1{
-	padding-top: 2.5%;
-}
-
-
-=======
 #bottom h3{
 	padding-top: 2.5%;
 }
->>>>>>> web
 /* 
 ====================
 Footer
 ====================
 */
-<<<<<<< HEAD
- #footer{
- 	background-color: #009688;
- }
- #footer a{
- 	color:white;
- 	text-decoration: none;
-=======
-
+#footer{
+	position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+}
 #footer p #date{
 	font-size: 15px;
 }
  #footer p {
  	text-align: left;
->>>>>>> web
  }
  /* 
 ====================
@@ -160,8 +132,6 @@ Awesome Icons
 */
 .fa{
 	font-size: 25px;
-<<<<<<< HEAD
-=======
 }
 #icon:hover{
  color:#00e6cf;
@@ -173,8 +143,47 @@ Downloads Page
 ====================
 */
 .download-table{
-	padding: 5%
-  max-width: 100%;
-  box-sizing: border-box; }
->>>>>>> web
+	padding: 5%;
+  	max-width: 100%;
+	padding: 5%;	
+	max-width: 85%;
+	margin-left:100px;
+	margin-top:25px;
+	margin-bottom:100px;
+}
+
+.download-table td .button{
+	color:#009688;
+}
+
+ /* 
+====================
+About Us Page
+====================
+*/
+#aboutus h1{
+	padding:5%;
+}
+#aboutus h5{
+	padding-left:5%;
+}
+#aboutus .row{
+	padding-bottom: 5%;
+}
+ /* 
+====================
+Signup Login Form
+====================
+*/
+.signup{
+	padding-top:5%;
+}
+#signup-button {
+	color: white;
+}
+/*
+Setting the specific element id's of the login fields to x009688 to override white text set by .nav
+*/
+#username, #password, #email {
+	color: #009688;
 }

@@ -10,14 +10,7 @@ html {
 }
 
 html, input {
-  font-family:
-    "HelveticaNeue-Light",
-    "Helvetica Neue Light",
-    "Helvetica Neue",
-    Helvetica,
-    Arial,
-    "Lucida Grande",
-    sans-serif;
+ font-family: 'Lato', sans-serif;
 }
 
 html, body {
@@ -98,7 +91,7 @@ ul {
   font-size: 150%;
 }
 
-.inputMessage {
+.inputMessage, .sendButton {
   font-size: 100%;
 }
 
@@ -112,17 +105,33 @@ ul {
 /* Messages */
 
 .chatArea {
-  height: 100%;
-  padding-bottom: 60px;
+  height: 90%;
 }
 
 .messages {
   height: 100%;
-  margin: 0;
+  width: 85%;
   overflow-y: scroll;
   padding: 10px 20px 10px 20px;
+  float: left;
 }
-
+.sidebar{
+  width: 15%;
+  height:100%;
+  overflow-y:scroll;
+  border:3px solid #009688;
+}
+.sidebar h3{
+  text-align: center;
+  color: #009688;
+}
+.sidebar hr{
+  border-color:#009688;
+}
+.userlist li{
+  color:#009688;
+  text-align: center;
+}
 .message.typing .messageBody {
   color: gray;
 }
@@ -136,15 +145,20 @@ ul {
 }
 
 /* Input */
-
 .inputMessage {
-  border: 10px solid #000;
-  bottom: 0;
-  height: 60px;
-  left: 0;
+  border: 2px solid #009688;
+  height: 10%;
   outline: none;
   padding-left: 10px;
-  position: absolute;
-  right: 0;
-  width: 100%;
+  width: 85%;
+}
+/*  Send button */
+.sendButton{
+  border:2px solid #009688;
+  height:10%;
+  width:15%;
+  outline:none;
+  color:#fff;
+  background-color: #009688;
+  float:right;
 }
