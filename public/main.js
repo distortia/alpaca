@@ -41,7 +41,7 @@ $(function() {
   // Sets the client's username
   function setUsername () {
     username = cleanInput($usernameInput.val().trim());
-
+      console.log(data);
     // If the username is valid
     if (username) {
       $loginPage.fadeOut();
@@ -116,9 +116,10 @@ $(function() {
     addUserListElement($userListDiv, options);
   }
   function removeUser(data, options){
-    //goal: delete li based on contents of element
+    //goal: delete username from userList
 
     //get li element with content of the username
+
     //  document.html(data.username)
     //delete the li element
   }
@@ -305,7 +306,6 @@ $(function() {
   socket.on('user joined', function (data) {
     log(data.username + ' joined');
     addParticipantsMessage(data);
-    addUser(data);
   });
 
   // Whenever the server emits 'user left', log it in the chat body

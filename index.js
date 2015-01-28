@@ -24,11 +24,13 @@ var numUsers = 0;
 
 function addGlobalUser(username){
   userList.push(username);
-  console.log(userList);
+  console.log("UserList: " + userList);
 }
 function removeGlobalUser(username){
-  userList = userList.slice(username,1);
-  console.log(userList);
+  var index = userList.indexOf(username);
+  var removedUser = userList.splice(index, 1);
+  console.log("Removed: " + removedUser);
+  console.log("New UserList is " + userList );
 }
 io.on('connection', function (socket) {
   var addedUser = false;
@@ -46,9 +48,9 @@ io.on('connection', function (socket) {
   socket.on('add user', function (username) {
     // we store the username in the socket session for this client
     socket.username = username;
+    addGlobalUser(username);
     // add the client's username to the global list
     usernames[username] = username;
-    addGlobalUser(socket.username);
     ++numUsers;
     addedUser = true;
     socket.emit('login', {
@@ -80,8 +82,8 @@ io.on('connection', function (socket) {
     // remove the username from global usernames list
     if (addedUser) {
       delete usernames[socket.username];
+      removeGlobalUser(socket.username);
       --numUsers;
-    removeGlobalUser(socket.username);
 
       // echo globally that this client has left
       socket.broadcast.emit('user left', {
