@@ -104,7 +104,7 @@ $(function() {
   }
 
   //Adds users to userlist
-  function addUser (data, options) {
+  function addUser (data) {
     var $userListDiv = $('<span class="userList"/>')
       .text(data.username)
       .css('color', getUsernameColor(data.username));
@@ -113,7 +113,7 @@ $(function() {
       .data('username', data.username)
       .append($userListDiv);
       
-    addUserListElement($userListDiv, options);
+    addUserListElement($userDiv,$userListDiv);
   }
   function removeUser(data, options){
     //goal: delete username from userList
