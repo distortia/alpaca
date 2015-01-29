@@ -49,7 +49,8 @@ $(function() {
 
       // Tell the server your username
       socket.emit('add user', username);
-      addUser(username);
+     socket.emit('userList',username); 
+      //addUser(username);
     }
     //addUser(username);
   }
@@ -299,6 +300,9 @@ $(function() {
     addParticipantsMessage(data);
   });
 
+  socket.on('userList', function(data){
+    console.log("This is retrieved from server global userList : " + data);
+  })
   // Whenever the server emits 'new message', update the chat body
   socket.on('new message', function (data) {
     addChatMessage(data);

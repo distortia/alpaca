@@ -22,17 +22,21 @@ var usernames = {};
 var userList = [];
 var numUsers = 0;
 
+//Keeps running list of all users in chat
 function addGlobalUser(username){
   userList.push(username);
   console.log("UserList: " + userList);
 }
+//Removes specific user from global list
 function removeGlobalUser(username){
   var index = userList.indexOf(username);
   var removedUser = userList.splice(index, 1);
   console.log("Removed: " + removedUser);
   console.log("New UserList is " + userList );
 }
+
 io.on('connection', function (socket) {
+
   var addedUser = false;
 
   // when the client emits 'new message', this listens and executes
@@ -61,9 +65,8 @@ io.on('connection', function (socket) {
       username: socket.username,
       numUsers: numUsers
     });
-    socket.broadcast.emit("User List",{
-      userList
-    });
+    //emits userlist socket event, which should return the userList array.
+    socket.emit('userList', {'userList': userList});
   });
 
   // when the client emits 'typing', we broadcast it to others
