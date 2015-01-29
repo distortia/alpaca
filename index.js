@@ -61,6 +61,9 @@ io.on('connection', function (socket) {
       username: socket.username,
       numUsers: numUsers
     });
+    socket.broadcast.emit("User List",{
+      userList
+    });
   });
 
   // when the client emits 'typing', we broadcast it to others
