@@ -15,7 +15,6 @@ $(function() {
   var $messages = $('.messages'); // Messages area
   var $userList = $('.userList'); //User List
   var $inputMessage = $('.inputMessage'); // Input message input box
-
   var $loginPage = $('.login.page'); // The login page
   var $chatPage = $('.chat.page'); // The chatroom page
 
@@ -41,7 +40,6 @@ $(function() {
   // Sets the client's username
   function setUsername () {
     username = cleanInput($usernameInput.val().trim());
-      console.log(data);
     // If the username is valid
     if (username) {
       $loginPage.fadeOut();
@@ -51,6 +49,7 @@ $(function() {
 
       // Tell the server your username
       socket.emit('add user', username);
+      addUser(username);
     }
   }
 
@@ -103,26 +102,28 @@ $(function() {
     addMessageElement($messageDiv, options);
   }
 
-  //Adds users to userlist
-  function addUser (data) {
-    var $userListDiv = $('<span class="userList"/>')
-      .text(data.username)
-      .css('color', getUsernameColor(data.username));
+  // //Adds users to userlist
+  // function addUser (data) {
+  //   var $userListDiv = $('<span class="userList"/>')
+  //     .text(username)
+  //     .css('color', getUsernameColor(username));
 
-   var $userDiv = $('<li class="user"/>')
-      .data('username', data.username)
-      .append($userListDiv);
+  //  var $userDiv = $('<li class="user"/>')
+  //     .data('username', data.username)
+  //     .append($userListDiv);
       
-    addUserListElement($userDiv,$userListDiv);
-  }
-  function removeUser(data, options){
-    //goal: delete username from userList
+  //   addUserListElement($userDiv,$userListDiv);
+  // }
 
-    //get li element with content of the username
+  // function removeUser(data, options){
+  //   //goal: delete username from userList
 
-    //  document.html(data.username)
-    //delete the li element
-  }
+  //   //get li element with content of the username
+
+  //   //  document.html(data.username)
+  //   //delete the li element
+  // }
+
   // Adds the visual chat typing message
   function addChatTyping (data) {
     data.typing = true;
@@ -313,6 +314,7 @@ $(function() {
     log(data.username + ' left');
     addParticipantsMessage(data);
     removeChatTyping(data);
+    removeUser(data.username);
   });
 
   // Whenever the server emits 'typing', show the typing message
