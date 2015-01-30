@@ -49,10 +49,7 @@ $(function() {
 
       // Tell the server your username
       socket.emit('add user', username);
-     socket.emit('userList',username); 
-      //addUser(username);
     }
-    //addUser(username);
   }
 
   // Sends a chat message
@@ -104,18 +101,18 @@ $(function() {
     addMessageElement($messageDiv, options);
   }
 
-  // //Adds users to userlist
-  // function addUser (data) {
-  //   var $userListDiv = $('<span class="userList"/>')
-  //     .text(username)
-  //     .css('color', getUsernameColor(username));
+  //Adds users to userlist
+  function addUser (data) {
+    var $userListDiv = $('<span class="userList"/>')
+      .text(username)
+      .css('color', getUsernameColor(username));
 
-  //  var $userDiv = $('<li class="user"/>')
-  //     .data('username', data.username)
-  //     .append($userListDiv);
+   var $userDiv = $('<li class="user"/>')
+      .data('username', data.username)
+      .append($userListDiv);
       
-  //   addUserListElement($userDiv,$userListDiv);
-  // }
+    addUserListElement($userDiv,$userListDiv);
+  }
 
   // function removeUser(data, options){
   //   //goal: delete username from userList
@@ -300,9 +297,6 @@ $(function() {
     addParticipantsMessage(data);
   });
 
-  socket.on('userList', function(data){
-    console.log("This is retrieved from server global userList : " + data);
-  })
   // Whenever the server emits 'new message', update the chat body
   socket.on('new message', function (data) {
     addChatMessage(data);
@@ -312,6 +306,7 @@ $(function() {
   socket.on('user joined', function (data) {
     log(data.username + ' joined');
     addParticipantsMessage(data);
+    //addUser(data.username);
   });
 
   // Whenever the server emits 'user left', log it in the chat body
@@ -319,7 +314,7 @@ $(function() {
     log(data.username + ' left');
     addParticipantsMessage(data);
     removeChatTyping(data);
-    removeUser(data.username);
+    //removeUser(data.username);
   });
 
   // Whenever the server emits 'typing', show the typing message

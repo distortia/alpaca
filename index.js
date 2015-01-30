@@ -22,17 +22,29 @@ var usernames = {};
 var userList = [];
 var numUsers = 0;
 
+ app.get('/', function(req, res){
+  res.send('userList');
+  });
+
+
+function getUserList(){
+  console.log("UserList is: " + userList);
+
+ 
+}
+
 //Keeps running list of all users in chat
 function addGlobalUser(username){
   userList.push(username);
-  console.log("UserList: " + userList);
+  getUserList();
 }
+
 //Removes specific user from global list
 function removeGlobalUser(username){
   var index = userList.indexOf(username);
   var removedUser = userList.splice(index, 1);
   console.log("Removed: " + removedUser);
-  console.log("New UserList is " + userList );
+  getUserList();
 }
 
 io.on('connection', function (socket) {
@@ -60,14 +72,12 @@ io.on('connection', function (socket) {
     socket.emit('login', {
       numUsers: numUsers
     });
+
     // echo globally (all clients) that a person has connected
     socket.broadcast.emit('user joined', {
       username: socket.username,
       numUsers: numUsers
     });
-    //emits userlist socket event, which should return the userList array.
-    socket.emit('userList', {'userList': userList});
-  });
 
   // when the client emits 'typing', we broadcast it to others
   socket.on('typing', function () {
@@ -98,5 +108,5 @@ io.on('connection', function (socket) {
       });
     }
   });
-
+});
 });
