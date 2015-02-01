@@ -25,6 +25,9 @@ var numUsers = 0;
 //=====================================//
 //==== Don't Touch above this line ====//
 
+
+//======== userList functions ========//
+
 //Get's user list Array
 function getUserList(){
   console.log("UserList is: " + userList);
@@ -43,6 +46,8 @@ function removeGlobalUser(username){
   console.log("Removed: " + removedUser);
 }
 
+//=====================================//
+
 //Socket event, when somebody connects
 io.on('connection', function (socket) {
 
@@ -56,6 +61,8 @@ io.on('connection', function (socket) {
       message: data
     });
   });
+
+//====== server -> client functions ======//
 
   //Returns the user list to the client
   socket.on('user list',function(data){
@@ -76,6 +83,8 @@ io.on('connection', function (socket) {
   socket.on('remove global user', function(username){
     removeGlobalUser(username);
   });
+  
+//=====================================//
 
   // when the client emits 'add user', this listens and executes
   socket.on('add user', function (username) {

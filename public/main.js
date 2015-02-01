@@ -27,6 +27,10 @@ $(function() {
 
   var socket = io();
 
+  socket.on('connect', function(){
+    getUserList();
+  })
+
   //created this function to make it easier to get the globalUserList from the server
   function getUserList(){
       //gets userList
@@ -321,7 +325,6 @@ $(function() {
     log(data.username + ' joined');
     addParticipantsMessage(data);
    // addUser(data.username);
-   getUserList();
   });
 
   // Whenever the server emits 'user left', log it in the chat body
