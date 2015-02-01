@@ -27,12 +27,21 @@ $(function() {
 
   var socket = io();
 
+  //created this function to make it easier to get the globalUserList from the server
+  function getUserList(){
+      //gets userList
+      socket.emit('user list',function(data){
+        //this renders client side
+        console.log("Data captured was: " + data);
+      });
+
+  }
   function addParticipantsMessage (data) {
     var message = '';
     if (data.numUsers === 1) {
       message += "there's nobody else here :(";
     } else {
-      message += "there are currenty " + data.numUsers + " people here";
+      message += "there are currently " + data.numUsers + " people here";
     }
     log(message);
   }
@@ -42,13 +51,18 @@ $(function() {
     username = cleanInput($usernameInput.val().trim());
     // If the username is valid
     if (username) {
+      //jquery animations
       $loginPage.fadeOut();
       $chatPage.show();
       $loginPage.off('click');
       $currentInput = $inputMessage.focus();
 
-      // Tell the server your username
       socket.emit('add user', username);
+      //addUser(username);
+      socket.emit('add global user',username);
+
+      //gets globalUserList and returns it to client
+      getUserList();
     }
   }
 
@@ -108,7 +122,7 @@ $(function() {
       .css('color', getUsernameColor(username));
 
    var $userDiv = $('<li class="user"/>')
-      .data('username', data.username)
+      .data('username', username)
       .append($userListDiv);
       
     addUserListElement($userDiv,$userListDiv);
@@ -306,7 +320,8 @@ $(function() {
   socket.on('user joined', function (data) {
     log(data.username + ' joined');
     addParticipantsMessage(data);
-    //addUser(data.username);
+   // addUser(data.username);
+   getUserList();
   });
 
   // Whenever the server emits 'user left', log it in the chat body
@@ -314,6 +329,7 @@ $(function() {
     log(data.username + ' left');
     addParticipantsMessage(data);
     removeChatTyping(data);
+    socket.emit('remove global user', data.username);
     //removeUser(data.username);
   });
 

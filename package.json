@@ -1,7 +1,7 @@
 {
-  "name": "socket-chat-example",
+  "name": "Alpaca Chat",
   "version": "0.0.1",
-  "description": "my first socket.io app",
+  "description": "Alpaca Chat Prototype",
   "dependencies": {
     "moment": "^2.9.0",
     "socket.io": "^1.2.1"

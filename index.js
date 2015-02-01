@@ -1,5 +1,7 @@
 //This is server side JS
 // http://socket.io/docs/#using-with-the-express-framework
+
+
 // Setup basic express server
 var express = require('express');
 var app = express();
@@ -12,41 +14,36 @@ server.listen(port, function () {
   console.log('Server listening at port %d', port);
 });
 
-// Routing
+// Routing - directs to the public folder.
 app.use(express.static(__dirname + '/public'));
-
-// Chatroom
 
 // usernames which are currently connected to the chat
 var usernames = {};
 var userList = [];
 var numUsers = 0;
 
- app.get('/', function(req, res){
-  res.send('userList');
-  });
+//=====================================//
+//==== Don't Touch above this line ====//
 
-
+//Get's user list Array
 function getUserList(){
   console.log("UserList is: " + userList);
-
- 
 }
 
-//Keeps running list of all users in chat
+//Adds the user to the userList array
 function addGlobalUser(username){
+  console.log("Added: " + username);
   userList.push(username);
-  getUserList();
 }
 
-//Removes specific user from global list
+//Removes specific user from the userList array
 function removeGlobalUser(username){
   var index = userList.indexOf(username);
   var removedUser = userList.splice(index, 1);
   console.log("Removed: " + removedUser);
-  getUserList();
 }
 
+//Socket event, when somebody connects
 io.on('connection', function (socket) {
 
   var addedUser = false;
@@ -60,11 +57,30 @@ io.on('connection', function (socket) {
     });
   });
 
+  //Returns the user list to the client
+  socket.on('user list',function(data){
+    getUserList();
+    console.log('Got userlist!');
+    //this returns userList to client
+    data(userList);
+  });
+
+  //Adds user to userlist
+  //Client to server
+  socket.on('add global user',function(username){
+    addGlobalUser(username);
+  });
+
+  //Removes user from userlist
+  //Client to server
+  socket.on('remove global user', function(username){
+    removeGlobalUser(username);
+  });
+
   // when the client emits 'add user', this listens and executes
   socket.on('add user', function (username) {
     // we store the username in the socket session for this client
     socket.username = username;
-    addGlobalUser(username);
     // add the client's username to the global list
     usernames[username] = username;
     ++numUsers;
@@ -98,7 +114,6 @@ io.on('connection', function (socket) {
     // remove the username from global usernames list
     if (addedUser) {
       delete usernames[socket.username];
-      removeGlobalUser(socket.username);
       --numUsers;
 
       // echo globally that this client has left
