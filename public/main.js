@@ -27,19 +27,16 @@ $(function() {
 
   var socket = io();
 
-  socket.on('connect', function(){
-    getUserList();
-  })
-
   //created this function to make it easier to get the globalUserList from the server
   function getUserList(){
       //gets userList
       socket.emit('user list',function(data){
         //this renders client side
-        console.log("Data captured was: " + data);
+        var userList = data;
+        console.log("UserList is: " + userList);
       });
-
   }
+
   function addParticipantsMessage (data) {
     var message = '';
     if (data.numUsers === 1) {
@@ -62,7 +59,7 @@ $(function() {
       $currentInput = $inputMessage.focus();
 
       socket.emit('add user', username);
-      //addUser(username);
+      addUser(username);
       socket.emit('add global user',username);
 
       //gets globalUserList and returns it to client
@@ -121,6 +118,7 @@ $(function() {
 
   //Adds users to userlist
   function addUser (data) {
+    getUserList();
     var $userListDiv = $('<span class="userList"/>')
       .text(username)
       .css('color', getUsernameColor(username));
@@ -302,6 +300,7 @@ $(function() {
       setUsername();
     }
   })
+
   // Socket events
 
   // Whenever the server emits 'login', log the login message
@@ -324,7 +323,6 @@ $(function() {
   socket.on('user joined', function (data) {
     log(data.username + ' joined');
     addParticipantsMessage(data);
-   // addUser(data.username);
   });
 
   // Whenever the server emits 'user left', log it in the chat body
@@ -332,7 +330,8 @@ $(function() {
     log(data.username + ' left');
     addParticipantsMessage(data);
     removeChatTyping(data);
-    socket.emit('remove global user', data.username);
+    socket.emit('remove global user', username);
+    console.log("Removed: " + username);
     //removeUser(data.username);
   });
 

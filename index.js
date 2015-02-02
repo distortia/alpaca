@@ -44,6 +44,7 @@ function removeGlobalUser(username){
   var index = userList.indexOf(username);
   var removedUser = userList.splice(index, 1);
   console.log("Removed: " + removedUser);
+  console.log("New userList is: " + userList);
 }
 
 //=====================================//
@@ -83,7 +84,7 @@ io.on('connection', function (socket) {
   socket.on('remove global user', function(username){
     removeGlobalUser(username);
   });
-  
+
 //=====================================//
 
   // when the client emits 'add user', this listens and executes
