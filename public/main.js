@@ -30,9 +30,12 @@ $(function() {
   //created this function to make it easier to get the globalUserList from the server
   function getUserList(){
       //gets userList
+      //this emits 'user list' which the server is looking for, then returns data from the callback function
       socket.emit('user list',function(data){
         //this renders client side
+        //the data we get from the callback function is assigned to userList
         var userList = data;
+        //logging for test reasons
         console.log("UserList is: " + userList);
       });
   }
@@ -50,6 +53,7 @@ $(function() {
   // Sets the client's username
   function setUsername () {
     username = cleanInput($usernameInput.val().trim());
+
     // If the username is valid
     if (username) {
       //jquery animations
@@ -58,8 +62,13 @@ $(function() {
       $loginPage.off('click');
       $currentInput = $inputMessage.focus();
 
+      //emit custom command for server to look for, we are passing the username to the server
       socket.emit('add user', username);
+
+      //Adding the username we got from above to add it to the userList on the page
       addUser(username);
+
+      //This is for clients to get the update that a new user has joined
       socket.emit('add global user',username);
 
       //gets globalUserList and returns it to client
@@ -117,12 +126,16 @@ $(function() {
   }
 
   //Adds users to userlist
+  //This is just following the same logic as addChatMessage above.
   function addUser (data) {
-    getUserList();
+    // assigns $userListDiv to [<span class="userlist"></span>], which is an array
+    //.text(username) gets the username
+    //.css appends the css of usernameColor to the username
     var $userListDiv = $('<span class="userList"/>')
       .text(username)
       .css('color', getUsernameColor(username));
 
+    //assigns $userDiv to 
    var $userDiv = $('<li class="user"/>')
       .data('username', username)
       .append($userListDiv);
