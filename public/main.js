@@ -28,10 +28,14 @@ $(function() {
   var socket = io();
 
   function time(){
-    socket.emit('get time',function(data){
-      console.log(data);
+
+    return socket.emit('get time',function(data){
+      var currentTime = data;
+      console.log(currentTime);
+      return true;
     });
   }
+
 
   //created this function to make it easier to get the globalUserList from the server
   function getUserList(){
@@ -127,7 +131,7 @@ $(function() {
     var $messageDiv = $('<li class="message"/>')
       .data('username', data.username)
       .addClass(typingClass)
-      .append($usernameDiv, $messageBodyDiv);
+      .append($usernameDiv, $messageBodyDiv, time());
 
     addMessageElement($messageDiv, options);
   }
