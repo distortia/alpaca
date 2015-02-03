@@ -27,6 +27,12 @@ $(function() {
 
   var socket = io();
 
+  function time(){
+    socket.emit('get time',function(data){
+      console.log(data);
+    });
+  }
+
   //created this function to make it easier to get the globalUserList from the server
   function getUserList(){
       //gets userList
@@ -90,6 +96,7 @@ $(function() {
       });
       // tell server to execute 'new message' and send along one parameter
       socket.emit('new message', message);
+      time();
     }
   }
 

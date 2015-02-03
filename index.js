@@ -9,6 +9,10 @@ var server = require('http').createServer(app);
 var io = require('socket.io')(server);
 var port = process.env.PORT || 3000;
 var moment = require('moment');
+// var time = moment().format('MMMM Do YYYY, h:mm:ss a');
+
+
+
 
 server.listen(port, function () {
   console.log('Server listening at port %d', port);
@@ -52,12 +56,18 @@ function removeGlobalUser(username){
 //Socket event, when somebody connects
 io.on('connection', function (socket) {
 
-  var addedUser = false;
+//Gets the current time for time stamps
+socket.on('get time', function(time){
+  time(moment().format('MMMM Do YYYY, h:mm:ss a'));
+});
+
+   var addedUser = false;
 
   // when the client emits 'new message', this listens and executes
-  socket.on('new message', function (data) {
+  socket.on('new message', function (time, data) {
     // we tell the client to execute 'new message'
     socket.broadcast.emit('new message', {
+      time: time,
       username: socket.username,
       message: data
     });
@@ -82,6 +92,7 @@ io.on('connection', function (socket) {
   //Removes user from userlist
   //Client to server
   socket.on('remove global user', function(username){
+
     removeGlobalUser(username);
   });
 
