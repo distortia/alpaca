@@ -60,7 +60,9 @@ Media Queries for Shared Styles
 
 /* Larger than tablet */
 @media (max-width: 750px) {
-
+  #login-section{
+    margin-top:10%;
+  }
 }
 /* Larger than desktop */
 @media (min-width: 1000px) {
@@ -146,13 +148,13 @@ Signup Login Form
 .signup{
   padding-top:5%;
 }
-#signup-button {
+#login-button, #register-button {
   color: white;
 }
 /*
 Setting the specific element id's of the login fields to x009688 to override white text set by .nav
 */
-#username, #password, #email {
+#loginUsername, #loginPassword, #registerUsername, #registerPassword, #registerEmail {
   color: #009688;
 }
 #signup-header{

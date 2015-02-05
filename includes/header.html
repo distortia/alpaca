@@ -14,18 +14,24 @@
     <div class="four columns"> 
       <div class="container signup">
         <div class="row">
-          <p>Sign In!</p>
+          <p>Log In!</p>
         </div>
         <div class="row">
-          <label for="name"> Username or Email </label>
-          <input type="text" class="u-full-width" id="username" name="username" placeholder="Enter Username or Email"> 
+          <label for="loginUsername"> Username or Email </label>
+          <input type="text" class="u-full-width" id="loginUsername" name="loginUsername" placeholder="Enter Username or Email"> 
         </div>
         <div class="row">
-          <label for="password">Password</label>
-          <input type="password" class="u-full-width" id="password" name="password"  placeholder="Enter Password">
+          <label for="loginPassword">Password</label>
+          <input type="password" class="u-full-width" id="loginPassword" name="loginPassword"  placeholder="Enter Password">
         </div>
         <div class="row">
-          <button type="submit" class="u-full-width" id="signup-button"> Sign In!</button>
+          <label>
+            <input id="loginCheckbox" type="checkbox"/>
+            Show/Hide password
+          </label>
+        </div>
+        <div class="row">
+          <button type="submit" class="u-full-width" id="login-button"> Log In!</button>
         </div>
       </div>
     </div>
@@ -37,22 +43,28 @@
     <div class="four columns">
       <div class="container signup">
         <div class="row">
-          <p>Sign Up!</p>
+          <p>Register!</p>
         </div>
         <div class="row">
-          <label for="name">Email </label>
-          <input type="text" class="u-full-width" id="email" name="email" placeholder="Enter Email"> 
+          <label for="registerEmail">Email </label>
+          <input type="text" class="u-full-width" id="registerEmail" name="registerEmail" placeholder="Enter Email"> 
         </div>
         <div class="row">
-          <label for="username">Username </label>
-          <input type="text" class="u-full-width" id="username" name="username" placeholder="Enter Username"> 
+          <label for="registerUsername">Username </label>
+          <input type="text" class="u-full-width" id="registerUsername" name="registerUsername" placeholder="Enter Username"> 
         </div>
         <div class="row">
-          <label for="password">Password</label>
-          <input type="password" class="u-full-width" id="password" name="password"  placeholder="Enter Password">
+          <label for="registerPassword">Password</label>
+          <input type="password" class="u-full-width" id="registerPassword" name="registerPassword"  placeholder="Enter Password">
         </div>
         <div class="row">
-          <button type="submit" class="u-full-width" id="signup-button"> Create Account!</button>
+          <label>
+            <input id="registerCheckbox" type="checkbox"/>
+            Show/Hide password
+          </label>
+        </div>
+        <div class="row">
+          <button type="submit" class="u-full-width" id="register-button"> Register Account!</button>
         </div>
       </div>
     </div>
