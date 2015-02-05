@@ -155,3 +155,6 @@ Setting the specific element id's of the login fields to x009688 to override whi
 #username, #password, #email {
   color: #009688;
 }
+#signup-header{
+  margin-top:10px;
+}
