@@ -1,0 +1,157 @@
+/*
+Main Colors
+Brand color:         #009688;
+Lighter brand color: #00b3a1;
+Hover color:         #00e6cf;
+/*
+
+/* 
+====================
+Shared Styles
+====================
+*/
+html{
+  position: relative;
+    min-height: 100%;
+}
+body{
+  margin: 0 0 100px 0;
+}
+#logo{
+  position: relative;
+  max-width: 75%;
+  margin: 0rem auto -10rem;
+}
+
+h1, p, h3{
+  text-align: center;
+ }
+ 
+#nav ul li {
+    display: inline;
+    margin: 0 20px 0 0;
+}
+#nav a,#nav i,#nav p{
+  color:white;
+ }
+a{
+  text-decoration: none;
+}
+img{
+  max-width: 100%;
+  
+}
+
+ /* 
+}
+====================
+Media Queries for Shared Styles
+====================
+*/
+/* Larger than mobile */
+@media (max-width: 400px) {
+
+}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {
+
+}
+
+/* Larger than tablet */
+@media (max-width: 750px) {
+
+}
+/* Larger than desktop */
+@media (min-width: 1000px) {
+
+}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {
+
+}
+
+/* 
+====================
+Header + footer Shared
+====================
+*/
+ #navbar, #footer{
+  background-color: #009688;
+  padding-top: 2.5%;
+  color:white;
+ }
+.title{
+  margin-top: 5%;
+}
+/* 
+====================
+Top of Index
+====================
+*/
+#top{
+  padding-top: 5%;
+  padding-bottom: 2.5%;
+}
+ #primary-left{
+  padding-top:10%;
+ }
+/* 
+====================
+Bottom of Index
+====================
+*/
+#bottom{
+  padding-bottom: 2.5%;
+  padding-top: 2.5%;
+}
+#bottom h3{
+  padding-top: 2.5%;
+}
+/* 
+====================
+Footer
+====================
+*/
+#footer{
+  position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+#footer p #date{
+  font-size: 15px;
+}
+ #footer p {
+  text-align: left;
+ }
+ /* 
+====================
+Awesome Icons
+====================
+*/
+.fa{
+  font-size: 25px;
+}
+#icon:hover{
+ color:#00e6cf;
+}
+
+ /* 
+====================
+Signup Login Form
+====================
+*/
+.signup{
+  padding-top:5%;
+}
+#signup-button {
+  color: white;
+}
+/*
+Setting the specific element id's of the login fields to x009688 to override white text set by .nav
+*/
+#username, #password, #email {
+  color: #009688;
+}
