@@ -41,9 +41,23 @@ img{
   max-width: 100%;
   
 }
+#tabs {
+  max-width: 50%;
+  margin-left:15%;
+}
+#tabs ul{
+  list-style-type: none;
+  margin-left:23%;
+}
+#tabs li{
+  display:inline;
+}
+#tabs a{
+  color:white;
+}
+
 
  /* 
-}
 ====================
 Media Queries for Shared Styles
 ====================
@@ -150,6 +164,9 @@ Signup Login Form
 }
 #login-button, #register-button {
   color: white;
+}
+#tabs li{
+  color:white;
 }
 /*
 Setting the specific element id's of the login fields to x009688 to override white text set by .nav

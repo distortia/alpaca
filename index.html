@@ -26,6 +26,7 @@
  <!-- Includes
   –––––––––––––––––––––––––––––––––––––––––––––––––– --> 
   <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
   
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -104,6 +105,9 @@
         $("#login-section").toggle();
       });
 
+      $('#registerText').click(function(){
+        $(".register").toggle();
+      });
       //This function is for the time stamp at the footer.
       function getDate() {
         //This gets a new date and assigns it to a variable d
@@ -138,7 +142,10 @@
         }
       });
 
-
+      //Tabs
+      $(function() {
+        $( "#tabs" ).tabs();
+      });
 
      });
   </script>
