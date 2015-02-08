@@ -1,9 +1,8 @@
 $(function() {
 	var socket = io();
 
-	socket.emit('hello', function(){
-
-	});
+	data = '';
+	socket.emit('hello', data);
 
 	socket.on('hello client', function(data){
 		console.log('hello client');
@@ -78,7 +77,7 @@ $(function() {
 			console.log(message);
 		});
 	}
-	
+
 	function typing(){
 		username = 'nick';
 		message = 'is typing';
@@ -87,6 +86,14 @@ $(function() {
 
 		socket.on('typing', function(username,data){
 			console.log(username + ' ' + message);
+		});
+	}
+
+	function timestamp(){
+		socket.emit('timestamp', data);
+
+		socket.on('timestamp', function(time){
+			console.log(time);
 		});
 	}
 
@@ -101,4 +108,5 @@ $(function() {
 	userLeft();
 	sendMessage();
 	typing();
+	timestamp();
 });	

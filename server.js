@@ -8,6 +8,7 @@ var io = 			require('socket.io')(server);
 var bodyParser = 	require('body-parser');
 var passport = 		require('passport');
 var port = 			process.env.PORT || 9001;
+var moment = 		require('moment');
 
 
 server.listen(port, function () {
@@ -27,7 +28,7 @@ io.on('connection', function (socket) {
 		socket.emit('user connected', username);
 	})
 
-	socket.on('hello', function(){
+	socket.on('hello', function(data){
 		console.log('hello server');
 
 		socket.emit('hello client');
@@ -68,5 +69,12 @@ io.on('connection', function (socket) {
 
 		socket.emit('typing', username, message);
 	});
-	
+
+	socket.on('timestamp', function(time){
+		time(moment().format('MMMM Do YYYY, h:mm:ss a'));
+  		console.log(time);
+
+  		socket.emit('timestamp', time);
+	});
+
 });
