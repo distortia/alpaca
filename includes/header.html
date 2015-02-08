@@ -14,14 +14,16 @@
   <div id="tabs">
     <div id="login-section">
       <div class="row">
-        <ul>
-          <li><a class="button" href="#tabs-login">Log in!</a></li>
-          <li> Or </li>
-          <li><a class="button" href="#tabs-register">Register!</a></li>
-        </ul>
+        <div class="four columns">
+          <ul id="tab-header">
+            <li id="tab-header-login"><a id="tab-header-login-link" href="#tabs-login">Log in!</a></li>
+            <li id="tab-header-register"><a id="tab-header-register-link" href="#tabs-register">Register!</a></li>
+          </ul>
+        </div> 
+       </div> 
+      <div class="row"> 
         <div id="tabs-login">
           <div class="container signup">
-            <h5>Log In</h5>
             <div class="row">
               <label for="loginUsername"> Username or Email </label>
               <input type="text" class="u-full-width" id="loginUsername" name="loginUsername" placeholder="Enter Username or Email">
@@ -43,7 +45,6 @@
         </div>
         <div id="tabs-register">
           <div class="container register">
-            <h5>Register</h5>
             <div class="row">
               <label for="registerEmail">Email </label>
               <input type="text" class="u-full-width" id="registerEmail" name="registerEmail" placeholder="Enter Email"> 
@@ -67,6 +68,9 @@
             </div>
           </div>
         </div>
+
+      </div>
+
       </div>
     </div>
   </div> 
