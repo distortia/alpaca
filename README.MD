@@ -28,6 +28,22 @@ Installations
 ----------
 Download node from [nodejs.org](nodejs.org)
 
+###Ruby
+--------------
+Download Ruby
+* OSX comes with Ruby
+* Windows go to (http://rubyinstaller.org/)
+
+###SASS
+--------------
+Install SASS by typing:
+```ruby
+gem install sass
+```
+
+SASS and Ruby must be in your path in order for the rest to work.
+
+
 ###Grunt-cli
 -------------
 ```javascript
