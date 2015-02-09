@@ -24,13 +24,19 @@ Angular: Googles front end Model, View, View-Model framework that is based on si
 Installations
 =================
 
-Grunt-cli
+###Node
+----------
+Download node from [nodejs.org]
+
+###Grunt-cli
+-------------
 ```javascript
 npm install -g grunt-cli
 ```
 the -g flag, installs it globally, so it can be used everywhere
 
-Everything Else
+###Everything Else
+------------------
 ```javascript
 npm install
 ```
