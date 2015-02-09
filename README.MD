@@ -57,6 +57,6 @@ To run the chat app, type:
 ```javascript
 node server.js
 ```
-and point your browser to localhost:9001
+and point your browser to localhost:9001 (cause it's over 9000!).
 
 
