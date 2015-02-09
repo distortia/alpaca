@@ -21,6 +21,21 @@ Sass: CSS Preprocessor that allows for traditional programming methodology to be
 Polymer: Googles Material-ui framework that creates and invokes custom web components/aninmations. 
 Angular: Googles front end Model, View, View-Model framework that is based on single page applications that dynamically load content.
 
+Installations
+=================
+
+Grunt-cli
+```javascript
+npm install -g grunt-cli
+```
+the -g flag, installs it globally, so it can be used everywhere
+
+Everything Else
+```javascript
+npm install
+```
+This will install everything inside the package.json file that you have pulled.
+
 
 How to use
 =============
@@ -57,6 +72,6 @@ To run the chat app, type:
 ```javascript
 node server.js
 ```
-and point your browser to localhost:9001 (cause it's over 9000!).
+and point your browser to localhost:9001 (cause it's over 9000!)
 
 
