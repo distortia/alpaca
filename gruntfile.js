@@ -4,7 +4,6 @@ module.exports = function(grunt){
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 
-
 		uglify : {
 			build: {
 				src: 'src/js/*.js',
@@ -42,6 +41,7 @@ module.exports = function(grunt){
 				}
 			}
 		},
+
 		jshint : {
 			all: ['src/js/script.js', './gruntfile.js']
 		},
@@ -56,8 +56,7 @@ module.exports = function(grunt){
 				tasks: ['sass:dev']
 			},
 		}
-
-
+		
 	});
 
 	//load the plugins
@@ -68,6 +67,5 @@ module.exports = function(grunt){
 
 	//register tasks
 	grunt.registerTask('default', ['uglify:dev','sass:dev']);
-
 	grunt.registerTask('build', ['uglify:build', 'sass:build']);
 }
