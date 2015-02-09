@@ -26,7 +26,7 @@ Installations
 
 ###Node
 ----------
-Download node from [nodejs.org]
+Download node from [nodejs.org](nodejs.org)
 
 ###Grunt-cli
 -------------
