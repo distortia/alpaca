@@ -1,0 +1,301 @@
+/*
+Main Colors
+Brand color:         #009688;
+Lighter brand color: #00b3a1;
+Hover color:         #00e6cf;
+/*
+
+/* 
+====================
+Shared Styles
+====================
+*/
+html{
+  position: relative;
+    min-height: 100%;
+}
+body{
+  margin: 0 0 100px 0;
+}
+#logo{
+  position: relative;
+  max-width: 75%;
+  margin: 0rem auto -10rem;
+}
+
+h1, p, h3{
+  text-align: center;
+ }
+ 
+#nav ul li {
+    display: inline;
+    margin: 0 20px 0 0;
+}
+#nav a,#nav i,#nav p{
+  color:white;
+ }
+a{
+  text-decoration: none;
+}
+img{
+  max-width: 100%;
+  
+}
+#tabs {
+  max-width: 50%;
+  margin-left:15%;
+}
+#tabs ul{
+  list-style-type: none;
+  margin-left:23%;
+}
+#tabs li{
+  display:inline;
+}
+#tabs a{
+  color:white;
+}
+
+
+ /* 
+====================
+Media Queries for Shared Styles
+====================
+*/
+/* Larger than mobile */
+@media (max-width: 400px) {
+  #tabs{
+    max-width: 100%
+  }
+}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {
+
+}
+
+/* Larger than tablet */
+@media (max-width: 750px) {
+  #login-section{
+    margin-top:10%;
+  }
+}
+/* Larger than desktop */
+@media (min-width: 1000px) {
+
+}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {
+
+}
+
+/* 
+====================
+Header + footer Shared
+====================
+*/
+ #navbar, #footer{
+  background-color: #009688;
+  padding-top: 2.5%;
+  color:white;
+ }
+.title{
+  margin-top: 5%;
+}
+/* 
+====================
+Top of Index
+====================
+*/
+#top{
+  padding-top: 5%;
+  padding-bottom: 2.5%;
+}
+ #primary-left{
+  padding-top:10%;
+ }
+/* 
+====================
+Bottom of Index
+====================
+*/
+#bottom{
+  padding-bottom: 2.5%;
+  padding-top: 2.5%;
+}
+#bottom h3{
+  padding-top: 2.5%;
+}
+/* 
+====================
+Footer
+====================
+*/
+#footer{
+  position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+#footer p #date{
+  font-size: 15px;
+}
+ #footer p {
+  text-align: left;
+ }
+ /* 
+====================
+Awesome Icons
+====================
+*/
+.fa{
+  font-size: 25px;
+}
+#icon:hover{
+ color:#00e6cf;
+}
+
+ /* 
+====================
+Signup Login Form
+====================
+*/
+.signup{
+  padding-top:5%;
+}
+#login-button, #register-button {
+  color: white;
+}
+#tabs li{
+  color:white;
+}
+/*
+Setting the specific element id's of the login fields to x009688 to override white text set by .nav
+*/
+#loginUsername, #loginPassword, #registerUsername, #registerPassword, #registerEmail {
+  color: #009688;
+}
+#signup-header{
+  margin-top:10px;
+}
+
+/*
+Tabs Shit
+*/
+
+#tab-header {
+    color: rgb(34, 34, 34);
+    height: 37px;
+    width: 1112px;
+    perspective-origin: 556px 19px;
+    transform-origin: 556px 19px;
+    border-top: 0px none rgb(34, 34, 34);
+    border-right: 0px none rgb(34, 34, 34);
+    border-bottom: 1px solid rgb(221, 221, 221);
+    border-left: 0px none rgb(34, 34, 34);
+    font: normal normal normal normal 15px/24px Lato, sans-serif;
+    list-style: none outside none;
+    margin: 0px 0px 20px;
+    outline: rgb(34, 34, 34) none 0px;
+    padding: 0px;
+}/*#UL_1*/
+
+#tab-header:after {
+    clear: both;
+    color: rgb(34, 34, 34);
+    display: table;
+    width: 1px;
+    perspective-origin: 0.5px 0px;
+    transform-origin: 0.5px 0px;
+    content: '';
+    border: 0px none rgb(34, 34, 34);
+    font: normal normal normal normal 15px/0px Lato, sans-serif;
+    list-style: none outside none;
+    outline: rgb(34, 34, 34) none 0px;
+}/*#UL_1:after*/
+
+#tab-header:before {
+    color: rgb(34, 34, 34);
+    display: table;
+    width: 1px;
+    perspective-origin: 0.5px 0px;
+    transform-origin: 0.5px 0px;
+    content: '';
+    border: 0px none rgb(34, 34, 34);
+    font: normal normal normal normal 15px/0px Lato, sans-serif;
+    list-style: none outside none;
+    outline: rgb(34, 34, 34) none 0px;
+}/*#UL_1:before*/
+
+#tab-header-login {
+    color: rgb(34, 34, 34);
+    display: block;
+    float: left;
+    height: 38px;
+    width: 64.703125px;
+    perspective-origin: 32.34375px 19px;
+    transform-origin: 32.34375px 19px;
+    border: 0px none rgb(34, 34, 34);
+    font: normal normal normal normal 15px/20px Lato, sans-serif;
+    list-style: none outside none;
+    margin: 0px 0px -1px;
+    outline: rgb(34, 34, 34) none 0px;
+}/*#LI_2*/
+
+#tab-header-login-link {
+    color: rgb(85, 85, 85);
+    cursor: default;
+    display: block;
+    height: 20px;
+    text-align: left;
+    text-decoration: none;
+    width: 36.703125px;
+    perspective-origin: 31.34375px 19px;
+    transform-origin: 31.34375px 19px;
+    background: rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box;
+    border-top: 1px solid rgb(221, 221, 221);
+    border-right: 1px solid rgb(221, 221, 221);
+    border-bottom: 1px solid rgba(0, 0, 0, 0);
+    border-left: 1px solid rgb(221, 221, 221);
+    border-radius: 4px 4px 0 0;
+    font: normal normal normal normal 15px/20px Lato, sans-serif;
+    list-style: none outside none;
+    margin: 0px 2px 0px 0px;
+    outline: rgb(85, 85, 85) none 0px;
+    padding: 8px 12px;
+}/*#A_3*/
+
+#tab-header-register {
+    color: rgb(34, 34, 34);
+    display: block;
+    float: left;
+    height: 38px;
+    width: 83.859375px;
+    perspective-origin: 41.921875px 19px;
+    transform-origin: 41.921875px 19px;
+    border: 0px none rgb(34, 34, 34);
+    font: normal normal normal normal 15px/20px Lato, sans-serif;
+    list-style: none outside none;
+    margin: 0px 0px -1px;
+    outline: rgb(34, 34, 34) none 0px;
+}/*#LI_4*/
+
+#tab-header-register-link {
+    color: rgb(0, 150, 136);
+    display: block;
+    height: 20px;
+    text-align: left;
+    text-decoration: none;
+    width: 55.859375px;
+    perspective-origin: 40.921875px 19px;
+    transform-origin: 40.921875px 19px;
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 4px 4px 0 0;
+    font: normal normal normal normal 15px/20px Lato, sans-serif;
+    list-style: none outside none;
+    margin: 0px 2px 0px 0px;
+    outline: rgb(0, 150, 136) none 0px;
+    padding: 8px 12px;
+}/*#A_5*/
+
