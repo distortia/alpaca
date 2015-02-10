@@ -1,3 +1,5 @@
+**Update: I am working on how to structure the chat application on top of our existing web site**
+
 Alpaca Chat
 =============
 The fully encrypted, lightweight, instant messenger!
@@ -97,3 +99,21 @@ node server.js
 and point your browser to localhost:9001 (cause it's over 9000!)
 
 
+File Structure
+===================
+All SASS/JS files being worked on will live inside the src folder. Grunt is set up to build these files and move them to the proper folder.
+
+
+Dev Process
+====================
+Pull the git changes
+```javascript
+git pull
+```
+sometimes you have to specify the branch. ie git pull origin [branch_here]
+
+start grunt
+```javascript
+grunt watch
+```
+and start working! 
