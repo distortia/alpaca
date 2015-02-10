@@ -1,79 +1,65 @@
 <div class="container">
 
-  <div class="eight columns">
-    <div class="title">
-      <h1>Alpaca Chat</h1>
-    </div>
-  </div>
-
-  <div class="four columns">
-   <p><input type="image" id="logo" src="img/alpaca.png"></p>
-  </div>
-
-  
-  <div id="tabs">
-    <div id="login-section">
-      <div class="row">
-        <div class="four columns">
-          <ul id="tab-header">
-            <li id="tab-header-login"><a id="tab-header-login-link" href="#tabs-login">Log in!</a></li>
-            <li id="tab-header-register"><a id="tab-header-register-link" href="#tabs-register">Register!</a></li>
-          </ul>
-        </div> 
-       </div> 
-      <div class="row"> 
-        <div id="tabs-login">
-          <div class="container signup">
-            <div class="row">
-              <label for="loginUsername"> Username or Email </label>
-              <input type="text" class="u-full-width" id="loginUsername" name="loginUsername" placeholder="Enter Username or Email">
-            </div>
-            <div class="row">
-              <label for="loginPassword">Password</label>
-              <input type="password" class="u-full-width" id="loginPassword" name="loginPassword"  placeholder="Enter Password">
-            </div>
-            <div class="row">
-              <label>
-                <input id="loginCheckbox" type="checkbox"/>
-                Show/Hide password
-              </label>
-            </div>
-            <div class="row">
-              <button type="submit" class="u-full-width" id="login-button"> Log In!</button>
-            </div>
-          </div>
+    <div class="eight columns">
+        <div class="title">
+            <h1>Alpaca Chat</h1>
         </div>
-        <div id="tabs-register">
-          <div class="container register">
-            <div class="row">
-              <label for="registerEmail">Email </label>
-              <input type="text" class="u-full-width" id="registerEmail" name="registerEmail" placeholder="Enter Email"> 
-            </div>
-            <div class="row">
-              <label for="registerUsername">Username </label>
-              <input type="text" class="u-full-width" id="registerUsername" name="registerUsername" placeholder="Enter Username"> 
-            </div>
-            <div class="row">
-              <label for="registerPassword">Password</label>
-              <input type="password" class="u-full-width" id="registerPassword" name="registerPassword"  placeholder="Enter Password">
-            </div>
-            <div class="row">
-              <label>
-                <input id="registerCheckbox" type="checkbox"/>
-                Show/Hide password
-              </label>
-            </div>
-            <div class="row">
-              <button type="submit" class="u-full-width" id="register-button"> Register Account!</button>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      </div>
     </div>
-  </div> 
+
+    <div class="four columns">
+        <p>
+            <input type="image" id="logo" src="img/alpaca.png">
+        </p>
+    </div>
+
+
+    <div id="tabs">
+        <div class="container">
+            <div id="login-section">
+              <div class="row">
+                <ul class="tab-header">
+                    <li class="u-pull-left"><a class="button" id="tab-header-login" href="#tabs-login">Log in!</a>
+                    </li>
+
+                    <li class="u-pull-right"><a class="button" id='tab-header-register' href="#tabs-register">Register!</a>
+                    </li>
+                </ul>
+                </div>
+                <div id="tabs-login">
+                    <div class="signup">
+                        <label for="loginUsername"> Username or Email </label>
+                        <input type="text" class="u-full-width" id="loginUsername" name="loginUsername" placeholder="Enter Username or Email">
+
+                        <label for="loginPassword">Password</label>
+                        <input type="password" class="u-full-width" id="loginPassword" name="loginPassword" placeholder="Enter Password">
+
+                        <label>
+                            <input id="loginCheckbox" type="checkbox" /> Show/Hide password
+                        </label>
+
+                        <button type="submit" class="u-full-width" id="login-button"> Log In!</button>
+                    </div>
+                </div>
+                <div id="tabs-register">
+                    <div class="register">
+
+                        <label for="registerEmail">Email </label>
+                        <input type="text" class="u-full-width" id="registerEmail" name="registerEmail" placeholder="Enter Email">
+                        <label for="registerUsername">Username </label>
+                        <input type="text" class="u-full-width" id="registerUsername" name="registerUsername" placeholder="Enter Username">
+                        <label for="registerPassword">Password</label>
+                        <input type="password" class="u-full-width" id="registerPassword" name="registerPassword" placeholder="Enter Password">
+                        <label>
+                            <input id="registerCheckbox" type="checkbox" /> Show/Hide password
+                        </label>
+                        <button type="submit" class="u-full-width" id="register-button"> Register Account!</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <!-- Ends Tabs -->
 
 </div>

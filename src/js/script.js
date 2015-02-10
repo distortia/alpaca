@@ -3,7 +3,7 @@
     $("#footer").load("includes/footer.html");
 
     //When the window loads, this hides the login section
-    $( window ).load(function() {
+$( window ).load(function() {
       $("#login-section").hide();
 
       //When you click the logo, the login section is toggled visible or hidden
@@ -53,4 +53,14 @@
         $( "#tabs" ).tabs();
       });
 
-     });
+    $('#tab-header-register').click(function() {
+      $(this).removeClass("button-primary");
+      $('#tab-header-login').toggleClass("button-primary");
+      });
+
+    $('#tab-header-login').click(function() {
+      $(this).removeClass("button-primary");
+      $('#tab-header-register').toggleClass("button-primary");
+      });
+
+});
