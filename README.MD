@@ -11,17 +11,17 @@ Break down of packages
 
 BackEnd
 ----------------
-NodeJs: Javascript Server Engine.
-ExpressJs: "The Rails of Node" - does routing/requests/views/scaffolding.
-Socket.io: Allows for realtime communications - Is both Frontend and Backend.
-MongoDB: JSON oritented database.
+* NodeJs: Javascript Server Engine.
+* ExpressJs: "The Rails of Node" - does routing/requests/views/scaffolding.
+* Socket.io: Allows for realtime communications - Is both Frontend and Backend.
+* MongoDB: JSON oritented database.
 
 FrontEnd
 --------------
-SkeletonUi: CSS boilerplate with built-in grid ~ 400 lines of css.
-Sass: CSS Preprocessor that allows for traditional programming methodology to be applied to css (functions, methods, mathematical equations).
-Polymer: Googles Material-ui framework that creates and invokes custom web components/aninmations. 
-Angular: Googles front end Model, View, View-Model framework that is based on single page applications that dynamically load content.
+* SkeletonUi: CSS boilerplate with built-in grid ~ 400 lines of css.
+* Sass: CSS Preprocessor that allows for traditional programming methodology to be applied to css (functions, methods, mathematical equations).
+* Polymer: Googles Material-ui framework that creates and invokes custom web components/aninmations. 
+* Angular: Googles front end Model, View, View-Model framework that is based on single page applications that dynamically load content.
 
 Installations
 =================
