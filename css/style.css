@@ -1154,14 +1154,14 @@ Signup Login Form
 .signup #login-button, .signup #register-button, .register #login-button, .register #register-button {
   color: white;
 }
-.signup .tab-header ul, .register .tab-header ul {
+.signup ul, .register ul {
   list-style-type: none;
 }
-.signup .tab-header ul li, .register .tab-header ul li {
+.signup li, .register li {
   color: white;
   display: inline;
 }
-.signup .tab-header ul #tab-header-login:active, .signup .tab-header ul .active, .register .tab-header ul #tab-header-login:active, .register .tab-header ul .active {
+.signup #tab-header-login:active, .signup .active, .register #tab-header-login:active, .register .active {
   background-color: white;
 }
 .signup #loginUsername, .signup #loginPassword, .signup #registerUsername,

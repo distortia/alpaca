@@ -175,19 +175,18 @@ Signup Login Form
 .signup, .register{
   padding-top:5%;
 
-#login-button, #register-button {
-  color: white;
-}
-.tab-header ul{
+  #login-button, #register-button {
+    color: white;
+  }
+  ul{
     list-style-type:none;
-
-    li {
-    color:white;
-    display: inline;
-    }
-    #tab-header-login:active, .active{
-      background-color:white;
-    }
+  }
+  li {
+  color:white;
+  display: inline;
+  }
+  #tab-header-login:active, .active{
+    background-color:white;
   }
   #loginUsername, #loginPassword, #registerUsername, 
   #registerPassword, #registerEmail {
