@@ -1,0 +1,142 @@
+/*
+Main Colors
+Brand color:         #009688;
+Lighter brand color: #00b3a1;
+Hover color:         #00e6cf;
+/*
+
+/* 
+====================
+Shared Styles
+====================
+*/
+html {
+  position: relative;
+  min-height: 100%; }
+  html body {
+    margin: 0 0 100px 0; }
+  html img {
+    max-width: 100%; }
+  html h1, html p, html h3 {
+    text-align: center; }
+
+#logo {
+  position: relative;
+  max-width: 75%;
+  margin: 0rem auto -10rem; }
+
+#nav ul li {
+  display: inline;
+  margin: 0 20px 0 0; }
+#nav a, #nav i, #nav p {
+  color: white; }
+#nav a {
+  text-decoration: none; }
+
+#tabs {
+  max-width: 50%;
+  margin-left: 15%; }
+  #tabs ul {
+    list-style-type: none; }
+  #tabs li {
+    display: inline; }
+  #tabs a {
+    color: white; }
+
+ /* 
+====================
+Media Queries for Shared Styles
+====================
+*/
+/* Larger than mobile */
+@media (max-width: 400px) {
+  #tabs {
+    max-width: 100%; }
+
+  #login-section {
+    margin-top: 30%; } }
+/* Larger than phablet (also point when grid becomes active) */
+/* Larger than tablet */
+@media (max-width: 750px) {
+  #login-section {
+    margin-top: 10%; } }
+/* Larger than desktop */
+/* Larger than Desktop HD */
+/* 
+====================
+Header + footer Shared
+====================
+*/
+#navbar, #footer {
+  background-color: #009688;
+  padding-top: 2.5%;
+  color: white; }
+  #navbar .title, #footer .title {
+    margin-top: 5%; }
+
+/* 
+====================
+Top of Index
+====================
+*/
+#top {
+  padding-top: 5%;
+  padding-bottom: 2.5%; }
+  #top #primary-left {
+    padding-top: 10%; }
+
+/* 
+====================
+Bottom of Index
+====================
+*/
+#bottom {
+  padding-bottom: 2.5%;
+  padding-top: 2.5%; }
+  #bottom h3 {
+    padding-top: 2.5%; }
+
+/* 
+====================
+Footer
+====================
+*/
+#footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%; }
+  #footer #date {
+    font-size: 15px; }
+  #footer p {
+    text-align: left; }
+
+ /* 
+====================
+Awesome Icons
+====================
+*/
+.fa {
+  font-size: 25px; }
+
+#icon:hover {
+  color: #00e6cf; }
+
+ /* 
+====================
+Signup Login Form
+====================
+*/
+.signup, .register {
+  padding-top: 5%; }
+  .signup #login-button, .signup #register-button, .register #login-button, .register #register-button {
+    color: white; }
+  .signup .tab-header ul, .register .tab-header ul {
+    list-style-type: none; }
+    .signup .tab-header ul li, .register .tab-header ul li {
+      color: white;
+      display: inline; }
+    .signup .tab-header ul #tab-header-login:active, .signup .tab-header ul .active, .register .tab-header ul #tab-header-login:active, .register .tab-header ul .active {
+      background-color: white; }
+
+/*# sourceMappingURL=main.css.map */

@@ -13,48 +13,52 @@ Shared Styles
 html{
   position: relative;
     min-height: 100%;
+
+  body{
+    margin: 0 0 100px 0;
+  }
+  img{
+    max-width: 100%;
+  }
+  h1, p, h3{
+  text-align: center;
+ }
 }
-body{
-  margin: 0 0 100px 0;
-}
+
 #logo{
   position: relative;
   max-width: 75%;
   margin: 0rem auto -10rem;
 }
-
-h1, p, h3{
-  text-align: center;
- }
  
-#nav ul li {
+#nav{
+  ul li {
     display: inline;
     margin: 0 20px 0 0;
+  } 
+  a, i, p{
+    color:white;
+  }
+  a{
+    text-decoration: none;
+  }
 }
-#nav a,#nav i,#nav p{
-  color:white;
- }
-a{
-  text-decoration: none;
-}
-img{
-  max-width: 100%;
-  
-}
+
+
 #tabs {
   max-width: 50%;
   margin-left:15%;
-}
-#tabs ul{
-  list-style-type: none;
-}
-#tabs li{
-  display:inline;
-}
-#tabs a{
-  color:white;
-}
 
+  ul{
+    list-style-type: none;
+  }
+  li{
+    display:inline;
+  }
+  a{
+    color:white;
+  }
+}
 
  /* 
 ====================
@@ -101,9 +105,10 @@ Header + footer Shared
   background-color: #009688;
   padding-top: 2.5%;
   color:white;
- }
-.title{
-  margin-top: 5%;
+
+  .title{
+    margin-top: 5%;
+  }
 }
 /* 
 ====================
@@ -113,10 +118,11 @@ Top of Index
 #top{
   padding-top: 5%;
   padding-bottom: 2.5%;
-}
- #primary-left{
+
+  #primary-left{
   padding-top:10%;
  }
+}
 /* 
 ====================
 Bottom of Index
@@ -125,9 +131,10 @@ Bottom of Index
 #bottom{
   padding-bottom: 2.5%;
   padding-top: 2.5%;
-}
-#bottom h3{
+
+ h3{
   padding-top: 2.5%;
+  }
 }
 /* 
 ====================
@@ -136,16 +143,17 @@ Footer
 */
 #footer{
   position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-}
-#footer p #date{
+  left: 0;
+  bottom: 0;
+  width: 100%;
+
+  #date{
   font-size: 15px;
-}
- #footer p {
+  }
+  p{
   text-align: left;
- }
+  }
+}
  /* 
 ====================
 Awesome Icons
@@ -154,6 +162,7 @@ Awesome Icons
 .fa{
   font-size: 25px;
 }
+
 #icon:hover{
  color:#00e6cf;
 }
@@ -163,32 +172,28 @@ Awesome Icons
 Signup Login Form
 ====================
 */
-.signup{
+.signup, .register{
   padding-top:5%;
-}
+
 #login-button, #register-button {
   color: white;
 }
 .tab-header ul{
-  list-style-type:none;
+    list-style-type:none;
 
-  li {
-  color:white;
-  display: inline;
+    li {
+    color:white;
+    display: inline;
+    }
+    #tab-header-login:active, .active{
+      background-color:white;
+    }
   }
-  #tab-header-login:active, .active{
-    background-color:white;
-  }
-}
-
-/*
-Setting the specific element id's of the login fields to x009688 to override white text set by .nav
-*/
-#loginUsername, #loginPassword, #registerUsername, #registerPassword, #registerEmail {
+  #loginUsername, #loginPassword, #registerUsername, 
+  #registerPassword, #registerEmail {
   color: #009688;
+  }
 }
-#signup-header{
-  margin-top:10px;
-}
+ 
 
 
