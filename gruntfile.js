@@ -25,7 +25,7 @@ module.exports = function(grunt){
 			dev: {
 				options: {
 					style: 'expanded',
-					sourcemap: 'none'
+					sourcemap: 'none',
 				},
 				files: {
 					'./css/style.css' : 'src/sass/application.scss'
@@ -46,26 +46,22 @@ module.exports = function(grunt){
 			all: ['src/js/script.js', './gruntfile.js']
 		},
 
-		reload : {
-			proxy: {
-				host: 'localhost/alpaca'
-			}
-
-		},
-
-		watch : {
+		watch: {
+			options: {
+				livereload: true
+			},
+			html: {
+				files: ['index.html'],
+			},
 			js: {
 				files: ['src/js/*.js'],
 				tasks: ['uglify:dev','jshint:all']
-			},
-			css: {
+		    },
+			sass: {
 				files: ['src/sass/**/*.scss'],
 				tasks: ['sass:dev']
-			},
-			reload: ['*.html'],
-			tasks: ['reload:proxy']
+		    }	
 		}
-		
 	});
 
 	//load the plugins
@@ -73,7 +69,6 @@ module.exports = function(grunt){
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
-	grunt.loadNpmTasks('grunt-reload');
 
 	//register tasks
 	grunt.registerTask('default', ['uglify:dev','sass:dev']);

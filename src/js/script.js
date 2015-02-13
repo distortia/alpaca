@@ -1,7 +1,6 @@
 $("#header").load("includes/header.html"); 
 $("#footer").load("includes/footer.html");
 
-
 function getDate() {
     var d = new Date();
      var n = "Copyright <i class=\"fa fa-copyright\" style=\"font-size: 15px;\"></i> " + d.getFullYear() + " Alpaca Chat";
@@ -14,7 +13,7 @@ $( window ).load(function() {
   $(function() {
     $("#tabs").tabs();
   });
-  
+
   $("#login-section").hide();
   $("#logo").click(function() {
     $("#login-section").toggle();
